@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Les Créations – Le Cha'Telier Créatif</title>
+  <title>Les Créations Artisanales – Le Cha'Telier Créatif</title>
   <meta name="description" content="Découvrez les créations artisanales personnalisées du Cha'Telier Créatif : gnomes, box anniversaires, banderoles et pochons faits main en France." />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -13,9 +13,7 @@
   <div class="top-bar">
     <div class="container">
       <div class="logo">
-        <a href="index.html">
-          <img src="images/logo.png" alt="Le Cha'Telier Créatif" />
-        </a>
+        <a href="index.html"><img src="images/logo.png" alt="Le Cha'Telier Créatif" /></a>
       </div>
       <div class="social-icons">
         <a href="https://www.instagram.com/toncompte" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
@@ -26,49 +24,82 @@
     </div>
   </div>
 
+  <!-- Menu de navigation (optionnel pour cohérence) -->
+  <nav class="main-nav">
+    <ul class="nav-list">
+      <li><a href="index.html">Accueil</a></li>
+      <li class="dropdown">
+        <a href="creations.html">Mes créations ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="#gnome">Gnomes</a></li>
+          <li><a href="#box">Box personnalisées</a></li>
+          <li><a href="#banderoles">Banderoles</a></li>
+          <li><a href="#pochon">Pochons</a></li>
+        </ul>
+      </li>
+      <li><a href="index.html#about">À propos du Cha'Telier</a></li>
+      <li><a href="index.html#contact">Me contacter</a></li>
+    </ul>
+  </nav>
+
   <!-- Section Héros -->
   <header class="hero">
     <div class="hero-content">
-      <h1>Nos Créations</h1>
-      <p>Des créations artisanales faites main et personnalisées pour chaque occasion. Découvrez nos produits uniques et colorés.</p>
+      <h1>Nos Créations Artisanales</h1>
+      <p>Des produits uniques, personnalisés et faits main en France. Parcourez nos gnomes, box anniversaires, banderoles et pochons.</p>
     </div>
   </header>
 
   <!-- Section Produits -->
   <section class="section" id="produits">
     <h2>Découvrez nos créations</h2>
-    <p class="intro">Chaque création est réalisée avec soin et amour du détail. Personnalisable selon vos envies.</p>
+    <p class="intro">Chaque création est réalisée avec soin et amour du détail. Cliquez sur les images pour en savoir plus et commander.</p>
 
     <div class="grid">
-      <div class="card">
-        <img src="images/gnome-personnalise.jpg" alt="Gnomes personnalisés faits main" />
+      <!-- Gnomes -->
+      <div class="card" id="gnome">
+        <a href="gnome.html">
+          <img src="images/gnome-personnalise.jpg" alt="Gnomes personnalisés faits main en France" />
+        </a>
         <h3>Gnomes personnalisés</h3>
         <p>Des gnomes décoratifs uniques, créés sur mesure pour une décoration chaleureuse et originale.</p>
-        <a href="mailto:contact@lechateliercreatif.fr" class="btn">Commander</a>
+        <a href="gnome.html" class="btn">Voir le produit</a>
       </div>
-      <div class="card">
-        <img src="images/box-anniversaire.jpg" alt="Box anniversaires personnalisées" />
-        <h3>Box anniversaires</h3>
-        <p>Des box festives et personnalisées pour rendre chaque anniversaire inoubliable.</p>
-        <a href="mailto:contact@lechateliercreatif.fr" class="btn">Commander</a>
+
+      <!-- Box anniversaires -->
+      <div class="card" id="box">
+        <a href="box.html">
+          <img src="images/box-anniversaire.jpg" alt="Box anniversaires personnalisées faites main" />
+        </a>
+        <h3>Box anniversaires personnalisées</h3>
+        <p>Des box festives et personnalisées pour rendre chaque anniversaire inoubliable et coloré.</p>
+        <a href="box.html" class="btn">Voir le produit</a>
       </div>
-      <div class="card">
-        <img src="images/banderoles.jpg" alt="Banderoles personnalisées" />
+
+      <!-- Banderoles -->
+      <div class="card" id="banderoles">
+        <a href="banderoles.html">
+          <img src="images/banderoles.jpg" alt="Banderoles personnalisées faites main" />
+        </a>
         <h3>Banderoles personnalisées</h3>
-        <p>Des banderoles uniques et colorées pour célébrer vos événements avec style.</p>
-        <a href="mailto:contact@lechateliercreatif.fr" class="btn">Commander</a>
+        <p>Des banderoles uniques et colorées pour célébrer vos événements avec style et originalité.</p>
+        <a href="banderoles.html" class="btn">Voir le produit</a>
       </div>
-      <div class="card">
-        <img src="images/pochon-personnalise.jpg" alt="Pochons personnalisés faits main" />
+
+      <!-- Pochons -->
+      <div class="card" id="pochon">
+        <a href="pochon.html">
+          <img src="images/pochon-personnalise.jpg" alt="Pochons personnalisés faits main" />
+        </a>
         <h3>Pochons personnalisés</h3>
-        <p>Des pochons pratiques et décoratifs, personnalisés pour chaque occasion.</p>
-        <a href="mailto:contact@lechateliercreatif.fr" class="btn">Commander</a>
+        <p>Des pochons pratiques et décoratifs, personnalisés pour chaque occasion et réalisés avec soin.</p>
+        <a href="pochon.html" class="btn">Voir le produit</a>
       </div>
     </div>
   </section>
 
   <!-- CTA Contact -->
-  <section class="cta">
+  <section class="cta" id="contact">
     <h2>Une création qui vous fait rêver ?</h2>
     <p>Contactez-moi dès maintenant pour discuter de votre projet ou passer commande.</p>
     <a href="mailto:contact@lechateliercreatif.fr" class="btn">Me contacter</a>
