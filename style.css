@@ -175,6 +175,14 @@ a {
   font-size: 1.3rem;
 }
 
+.steps img {
+  display: block;
+  margin: 0 auto 15px; /* centré et espacé du titre */
+  height: 80px;        /* taille uniforme */
+  width: 80px;
+  object-fit: contain;  /* garde les proportions */
+}
+
 /* -----------------------
    À propos
 ----------------------- */
