@@ -1,4 +1,9 @@
 /* -----------------------
+   Import Google Fonts
+----------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Lato:wght@400;700&display=swap');
+
+/* -----------------------
    Base & Reset
 ----------------------- */
 * {
@@ -8,10 +13,18 @@
 }
 
 body {
-  font-family: "Georgia", "Times New Roman", serif;
+  font-family: 'Lato', sans-serif;
   color: #3b3b3b;
   background-color: #f9f6f2;
   line-height: 1.7;
+}
+
+/* -----------------------
+   Titres “fait main”
+----------------------- */
+h1, h2, h3 {
+  font-family: 'Amatic SC', cursive;
+  color: #3b3b3b;
 }
 
 /* -----------------------
@@ -41,7 +54,7 @@ a {
    Bandeau supérieur
 ----------------------- */
 .top-bar {
-  background-color: #c97c5d; /* terracotta clair */
+  background-color: #3b3b3b; /* même couleur que le footer */
   padding: 10px 5%;
 }
 
@@ -53,7 +66,7 @@ a {
 
 .top-bar .logo img {
   max-height: 70px;
-  border-radius: 50%; /* logo rond */
+  border-radius: 50%;
   object-fit: cover;
 }
 
@@ -63,7 +76,7 @@ a {
 }
 
 .top-bar .social-icons img {
-  height: 36px;  /* icônes agrandies */
+  height: 36px;
   width: 36px;
   transition: transform 0.3s;
 }
@@ -182,8 +195,7 @@ a {
 
 /* =========================
    GRILLE PRODUITS – CREATIONS
-   ========================= */
-
+========================= */
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -208,24 +220,21 @@ a {
   box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
 
-/* IMAGE PRODUIT */
 .product-card img {
   width: 100%;
-  max-width: 220px;     /* 🔥 taille contrôlée */
-  height: 220px;        /* 🔥 hauteur fixe */
-  object-fit: cover;    /* recadrage propre */
+  max-width: 220px;
+  height: 220px;
+  object-fit: cover;
   border-radius: 14px;
   margin-bottom: 15px;
 }
 
-/* TITRE PRODUIT */
-.product-card h2 {
+.product-card h2, .product-card h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
   color: #3b3b3b;
 }
 
-/* TEXTE PRODUIT */
 .product-card p {
   font-size: 0.95rem;
   line-height: 1.5;
@@ -236,7 +245,7 @@ a {
    Call to Action
 ----------------------- */
 .cta {
-  background-color: #6b8f71; /* vert sauge */
+  background-color: #3b3b3b; /* vert foncé pour rester cohérent avec le bandeau */
   color: #fff;
   text-align: center;
   padding: 80px 20px;
@@ -289,11 +298,11 @@ footer {
     box-shadow: none;
     border-radius: 0;
     padding-left: 15px;
-    display: none; /* hover désactivé sur mobile */
+    display: none;
   }
 
   .grid {
-    grid-template-columns: 1fr; /* une colonne sur mobile */
+    grid-template-columns: 1fr;
   }
 
   .top-bar .logo img {
