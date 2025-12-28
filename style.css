@@ -181,6 +181,12 @@ a {
   height: 80px;        /* taille uniforme */
   width: 80px;
   object-fit: contain;  /* garde les proportions */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.steps img:hover {
+  transform: scale(1.2) rotate(-5deg); /* léger zoom + inclinaison */
+  filter: drop-shadow(0 5px 8px rgba(0,0,0,0.2)); /* ombre subtile */
 }
 
 /* -----------------------
