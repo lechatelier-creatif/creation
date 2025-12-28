@@ -22,13 +22,13 @@
 }
 
 .top-bar .social-icons img {
-  height: 36px;  /* icônes plus visibles */
-  width: 36px;
+  height: 40px;  /* icônes plus visibles */
+  width: 40px;
   transition: transform 0.3s;
 }
 
 .top-bar .social-icons img:hover {
-  transform: scale(1.3); /* un peu plus de zoom au survol */
+  transform: scale(1.5); /* un peu plus de zoom au survol */
 }
 /* -----------------------
    Base & Reset
