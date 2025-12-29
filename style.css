@@ -71,7 +71,7 @@ a {
    Bandeau supérieur
 ----------------------- */
 .top-bar {
-  background-color: #3b3b3b;
+  background-color: #efe9e1; /* beige clair */
   padding: 10px 5%;
 }
 
@@ -289,8 +289,8 @@ a {
    Footer
 ----------------------- */
 footer {
-  background-color: #3b3b3b;
-  color: #f9f6f2;
+  background-color: #efe9e1; /* même teinte que le haut */
+  color: #3b3b3b;
   text-align: center;
   padding: 25px;
   font-size: 0.9rem;
