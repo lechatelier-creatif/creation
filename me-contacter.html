@@ -62,7 +62,7 @@
       je vous répondrai rapidement.
     </p>
 
-    <form class="contact-form" action="mailto:contact@lechateliercreatif.fr" method="post" enctype="text/plain">
+    <form class="contact-form" action="mailto:contact@lechateliercreatif.fr" method="post" enctype="text/plain" onsubmit="showConfirmation()">
 
       <div class="form-group">
         <label for="name">Nom / Prénom</label>
@@ -91,6 +91,10 @@
 
       <button type="submit" class="btn">Envoyer le message</button>
 
+      <p id="confirmation-message" style="display:none; margin-top:25px; font-weight:600; color:#3b3b3b;">
+        ✨ Merci pour votre message ! Je reviens vers vous très rapidement.
+      </p>
+
     </form>
   </section>
 
@@ -107,6 +111,12 @@
   <footer>
     <p>© Le Cha'Telier Créatif – Créations artisanales personnalisées faites main en France.</p>
   </footer>
+
+  <script>
+    function showConfirmation() {
+      document.getElementById('confirmation-message').style.display = 'block';
+    }
+  </script>
 
 </body>
 </html>
