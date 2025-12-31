@@ -3,10 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>À propos – Le Cha'Telier Créatif | Créations artisanales faites main</title>
   <meta name="description" content="Découvrez l’histoire du Cha'Telier Créatif, un atelier français de créations artisanales personnalisées, faites main avec passion." />
-
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -26,7 +24,7 @@
     </div>
   </div>
 
-  <!-- Menu de navigation -->
+  <!-- Navigation -->
   <nav class="main-nav">
     <ul class="nav-list container">
       <li><a href="index.html">Accueil</a></li>
@@ -39,14 +37,14 @@
           <li><a href="pochon.html">Pochons personnalisés</a></li>
         </ul>
       </li>
-      <li><a href="a-propos.html" class="active">À propos du Cha'Telier</a></li>
+      <li><a href="a-propos.html" class="active">À propos</a></li>
       <li><a href="me-contacter.html">Me contacter</a></li>
     </ul>
   </nav>
 
   <!-- HERO -->
   <header class="hero">
-    <div class="container hero-content">
+    <div class="container hero-content fade-in">
       <h1>Bienvenue dans le Cha'Telier Créatif</h1>
       <p>Un atelier artisanal où chaque création est pensée avec le cœur.</p>
     </div>
@@ -54,15 +52,15 @@
 
   <!-- SECTION PRINCIPALE : PHOTO + TEXTE -->
   <section class="section container">
-    <div class="grid two-columns">
+    <div class="two-columns">
 
-      <!-- Photo à gauche -->
-      <div class="about-image">
+      <!-- Photo -->
+      <div class="about-image slide-left">
         <img src="images/atelier.png" alt="Créatrice du Cha'Telier Créatif">
       </div>
 
-      <!-- Texte à droite -->
-      <div class="about-text">
+      <!-- Texte -->
+      <div class="about-text slide-right">
         <h2>Derrière Le Cha'Telier Créatif, un atelier artisanal fait main en France</h2>
 
         <p>
@@ -97,11 +95,12 @@
           <a href="creations.html" class="btn btn-primary">Découvrir mes créations</a>
         </div>
       </div>
+
     </div>
   </section>
 
   <!-- SECTION ENGAGEMENT -->
-  <section class="section alt container">
+  <section class="section alt container fade-in">
     <h2>Pourquoi choisir une création artisanale ?</h2>
     <p class="intro">
       Acheter une création faite main, c’est soutenir un savoir-faire, une passion
@@ -110,7 +109,7 @@
   </section>
 
   <!-- CTA -->
-  <section class="cta container">
+  <section class="cta container fade-in">
     <h2>Une idée, une envie, un projet ?</h2>
     <p>
       N’hésitez pas à me contacter pour discuter de votre future création personnalisée.
@@ -120,12 +119,28 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
+  <!-- FOOTER -->
+  <footer class="footer fade-in">
     <div class="container">
       <p>© Le Cha'Telier Créatif – Créations artisanales personnalisées faites main en France.</p>
     </div>
   </footer>
+
+  <!-- SCRIPT ANIMATION SCROLL -->
+  <script>
+    const elements = document.querySelectorAll('.fade-in, .slide-left, .slide-right');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    elements.forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>
