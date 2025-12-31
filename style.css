@@ -92,7 +92,6 @@ h3 {
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
-/* Centre les boutons */
 .btn-container {
   text-align: center;
   margin-top: 20px;
@@ -238,38 +237,39 @@ h3 {
   padding: 80px 10%;
 }
 
+.section h2 {
+  text-align: center;
+}
+
 .intro {
   max-width: 720px;
   margin: 0 auto 50px;
   text-align: center;
 }
 
-.section h2 {
-  text-align: center;
-}
-
 /* =================================================
-   ABOUT / TWO COLUMNS
+   TWO COLUMNS ABOUT / INDEX
 ================================================= */
 .two-columns {
   display: flex;
-  flex-wrap: wrap;
   gap: 40px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .about-image {
-  flex: 1 1 300px;
+  flex: 1 1 400px;
 }
 
 .about-image img {
   width: 100%;
+  max-width: 100%;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .about-text {
-  flex: 1 1 300px;
+  flex: 1 1 400px;
 }
 
 .values-list {
@@ -333,22 +333,33 @@ footer {
 /* =================================================
    RESPONSIVE
 ================================================= */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .two-columns {
     flex-direction: column;
     text-align: center;
   }
 
-  .hero h1 {
-    font-size: 3.2rem;
+  .about-image, .about-text {
+    flex: 1 1 100%;
   }
+}
 
+@media (max-width: 768px) {
   .section {
     padding: 60px 7%;
   }
 
-  .about-text,
-  .about-image {
-    flex: 1 1 100%;
+  .hero h1 {
+    font-size: 3.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .btn {
+    padding: 12px 24px;
   }
 }
