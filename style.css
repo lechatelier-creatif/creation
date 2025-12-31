@@ -31,7 +31,7 @@ a {
 }
 
 /* =================================================
-   TYPOGRAPHIE – HIÉRARCHIE CLAIRE
+   TYPOGRAPHIE
 ================================================= */
 h1, h2, h3 {
   font-family: 'Amatic SC', cursive;
@@ -53,7 +53,7 @@ h3 {
 }
 
 /* =================================================
-   BOUTONS (SIGNATURE)
+   BOUTONS
 ================================================= */
 .btn {
   display: inline-block;
@@ -92,13 +92,14 @@ h3 {
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
+/* Centre les boutons */
 .btn-container {
-  text-align: center; /* centre le bouton horizontalement */
-  margin-top: 20px;   /* un peu d'espace au-dessus */
+  text-align: center;
+  margin-top: 20px;
 }
 
 /* =================================================
-   TOP BAR (COMPACT & PRO)
+   TOP BAR
 ================================================= */
 .top-bar {
   background-color: #efe9e1;
@@ -146,6 +147,7 @@ h3 {
   list-style: none;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .nav-list li {
@@ -159,7 +161,8 @@ h3 {
   display: block;
 }
 
-.nav-list a:hover {
+.nav-list a:hover,
+.nav-list a.active {
   color: #c97c5d;
 }
 
@@ -246,97 +249,38 @@ h3 {
 }
 
 /* =================================================
-   GRILLE PRODUITS
+   ABOUT / TWO COLUMNS
 ================================================= */
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.product-card {
-  background-color: #ffffff;
-  border-radius: 20px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 40px rgba(0,0,0,0.14);
-}
-
-.product-card img {
-  width: 100%;
-  max-width: 220px;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 16px;
-  margin: 0 auto 16px;
-}
-
-.product-card p {
-  font-size: 0.95rem;
-  color: #666;
-}
-
-/* =================================================
-   CARTES SPÉCIALES
-================================================= */
-.process-card,
-.about-card {
-  background-color: #ffffff;
-  border-radius: 28px;
-  padding: 60px 50px;
-  max-width: 1100px;
-  margin: auto;
-  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
-}
-
-.process-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+.two-columns {
+  display: flex;
+  flex-wrap: wrap;
   gap: 40px;
-  margin-top: 40px;
-}
-
-.process-item img {
-  width: 150px;          
-  height: auto;
-  margin: 0 auto 25px;
-  display: block;
-}
-
-.process-item h3 {
-  font-size: 1.6rem;
-  margin-bottom: 12px;
-  text-align: center;    /* ⬅️ explicite */
-}
-
-.process-item p {
-  max-width: 260px;
-  margin: 0 auto;
-  color: #666;
-}
-
-/* =================================================
-   ABOUT HOME
-================================================= */
-.about-home {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
   align-items: center;
 }
 
+.about-image {
+  flex: 1 1 300px;
+}
+
 .about-image img {
-  max-width: 380px;
-  border-radius: 24px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.about-text {
+  flex: 1 1 300px;
+}
+
+.values-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.values-list li {
+  margin-bottom: 10px;
+  font-weight: 500;
 }
 
 /* =================================================
@@ -360,50 +304,27 @@ footer {
 }
 
 /* =================================================
-   ANIMATIONS SCROLL
-================================================= */
-.fade-in,
-.slide-left,
-.slide-right {
-  opacity: 0;
-  transition: all 0.8s ease;
-}
-
-.fade-in {
-  transform: translateY(30px);
-}
-
-.slide-left {
-  transform: translateX(-40px);
-}
-
-.slide-right {
-  transform: translateX(40px);
-}
-
-.visible {
-  opacity: 1;
-  transform: translate(0);
-}
-
-/* =================================================
    RESPONSIVE
 ================================================= */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 3rem;
+  .two-columns {
+    flex-direction: column;
+    text-align: center;
   }
 
   .hero h1 {
     font-size: 3.2rem;
   }
 
-  .about-home {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
   .section {
     padding: 60px 7%;
+  }
+
+  .about-text {
+    flex: 1 1 100%;
+  }
+
+  .about-image {
+    flex: 1 1 100%;
   }
 }
