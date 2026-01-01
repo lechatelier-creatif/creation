@@ -279,18 +279,41 @@ p {
   margin: auto;
 }
 
+/* ===== Bouton découvrir sur les cartes produit ===== */
 .product-card {
-  background-color: #fff;
-  border-radius: 20px;
-  padding: 20px;
+  position: relative; /* nécessaire pour positionner le bouton par-dessus */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  transition: transform 0.3s;
 }
 
 .product-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 40px rgba(0,0,0,0.14);
+  transform: translateY(-5px); /* effet léger au survol */
+}
+
+/* Bouton découvrir */
+.btn-discover {
+  position: absolute;
+  bottom: 20px; /* distance depuis le bas de la carte */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 16px;
+  background-color: #f16521; /* couleur Etsy */
+  color: #fff;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  opacity: 0; /* invisible par défaut */
+  transition: opacity 0.3s;
+  pointer-events: none; /* empêche le bouton de bloquer le clic sur la carte */
+}
+
+.product-card:hover .btn-discover {
+  opacity: 1; /* devient visible au survol */
+  pointer-events: auto; /* permet de cliquer si besoin */
 }
 
 /* 🔒 TAILLES IMAGE STABLES */
