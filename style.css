@@ -335,3 +335,61 @@ footer {
     height: 160px;
   }
 }
+
+/* =================================================
+   INDEX – UNE CRÉATION SUR MESURE (CADRE + TAILLES)
+================================================= */
+
+.custom-process {
+  background-color: #ffffff;
+  border-radius: 28px;
+  padding: 60px 50px;
+  max-width: 1100px;
+  margin: 0 auto;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+}
+
+.custom-process h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.process-item {
+  text-align: center;
+}
+
+.process-item img {
+  width: 140px;          /* 🔑 IMAGE MAÎTRISÉE */
+  height: auto;
+  margin: 0 auto 20px;
+}
+
+.process-item h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.process-item p {
+  font-size: 0.95rem;
+  color: #666;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .custom-process {
+    padding: 50px 30px;
+  }
+}
