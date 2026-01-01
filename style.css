@@ -308,6 +308,56 @@ p {
 }
 
 /* =================================================
+   MICRO-ANIMATIONS PRODUITS (HOVER)
+================================================= */
+
+/* Animation douce globale de la carte */
+.product-card {
+  cursor: pointer;
+  overflow: hidden; /* sécurise le zoom image */
+}
+
+/* Zoom léger de l’image */
+.product-card img {
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.06);
+}
+
+/* Titre plus vivant au survol */
+.product-card h3 {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.product-card:hover h3 {
+  color: #c97c5d;
+  transform: translateY(-2px);
+}
+
+/* Bouton "Découvrir" animé */
+.btn-discover {
+  display: inline-block;
+  margin-top: 12px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.product-card:hover .btn-discover {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile : animations plus discrètes */
+@media (max-width: 768px) {
+  .product-card:hover img {
+    transform: scale(1.03);
+  }
+}
+
+/* =================================================
    RESPONSIVE
 ================================================= */
 @media (max-width: 768px) {
