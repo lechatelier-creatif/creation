@@ -483,6 +483,33 @@ footer {
   border-color: #c97c5d;
 }
 
+/* ===== LIGHTBOX IMAGE PRODUIT ===== */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 16px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+
 /* ===== PAGE PRODUIT – MEDIA ===== */
 
 .product-media {
