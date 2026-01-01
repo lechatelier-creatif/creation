@@ -175,7 +175,7 @@ p {
    HERO
 ================================================= */
 .hero {
-  min-height: 65vh;
+  min-height: 50vh;
   background: linear-gradient(
       rgba(249,246,242,0.88),
       rgba(249,246,242,0.88)
@@ -185,7 +185,7 @@ p {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 60px 20px;
+  padding: 40px 20px;
 }
 
 .hero-content {
