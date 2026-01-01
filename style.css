@@ -31,27 +31,16 @@ a {
 }
 
 /* =================================================
-   TYPOGRAPHIE (RESTAURÉE)
+   TYPOGRAPHIE
 ================================================= */
 h1, h2, h3 {
   font-family: 'Amatic SC', cursive;
   letter-spacing: 1px;
 }
 
-h1 {
-  font-size: 3.8rem;
-  margin-bottom: 20px;
-}
-
-h2 {
-  font-size: 2.4rem;
-  margin-bottom: 20px;
-}
-
-h3 {
-  font-size: 1.6rem;
-  margin-bottom: 10px;
-}
+h1 { font-size: 3.8rem; margin-bottom: 20px; }
+h2 { font-size: 2.4rem; margin-bottom: 20px; }
+h3 { font-size: 1.6rem; margin-bottom: 10px; }
 
 p {
   font-size: 1rem;
@@ -68,10 +57,7 @@ p {
   padding: 14px 30px;
   border-radius: 30px;
   font-weight: 700;
-  letter-spacing: 0.5px;
-  transition: background-color 0.3s ease,
-              transform 0.3s ease,
-              box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn:hover {
@@ -80,35 +66,19 @@ p {
   box-shadow: 0 10px 25px rgba(0,0,0,0.18);
 }
 
-.btn-container {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.purchase-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 20px; /* espace entre le prix et le bouton */
-  margin-top: 20px;
-  flex-wrap: wrap; /* responsive mobile */
-}
-
 .price {
-  font-size: 24px; /* plus grand pour attirer l’œil */
+  font-size: 24px;
   font-weight: 700;
-  color: #F16521; /* couleur Etsy pour visibilité */
+  color: #F16521;
 }
 
 .btn-etsy {
-  display: inline-block;
   background-color: #F16521;
   color: #fff;
-  font-weight: 600;
-  text-decoration: none;
   padding: 14px 28px;
   border-radius: 8px;
+  font-weight: 600;
   transition: background-color 0.3s, transform 0.2s;
-  font-size: 16px;
 }
 
 .btn-etsy:hover {
@@ -128,8 +98,8 @@ p {
   max-width: 1200px;
   margin: auto;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo img {
@@ -171,10 +141,10 @@ p {
 }
 
 .nav-list a {
-  color: #efe9e1;
-  padding: 14px 18px;
-  font-weight: 600;
   display: block;
+  padding: 14px 18px;
+  color: #efe9e1;
+  font-weight: 600;
 }
 
 .nav-list a:hover {
@@ -186,7 +156,7 @@ p {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #fff;
+  background: #fff;
   min-width: 180px;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.12);
@@ -207,14 +177,11 @@ p {
 ================================================= */
 .hero {
   min-height: 50vh;
-  background: linear-gradient(
-      rgba(249,246,242,0.88),
-      rgba(249,246,242,0.88)
-    ),
-    url("images/hero.jpg") center/cover no-repeat;
+  background: linear-gradient(rgba(249,246,242,0.88), rgba(249,246,242,0.88)),
+              url("images/hero.jpg") center/cover no-repeat;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   text-align: center;
   padding: 40px 20px;
 }
@@ -224,10 +191,6 @@ p {
   padding: 45px;
   background-color: rgba(255,255,255,0.6);
   border-radius: 28px;
-}
-
-.hero p {
-  color: #6b6b6b;
 }
 
 /* =================================================
@@ -241,35 +204,8 @@ p {
   background-color: #efe9e1;
 }
 
-.section h2 {
-  text-align: center;
-}
-
-.intro {
-  max-width: 720px;
-  margin: 0 auto 40px;
-  text-align: center;
-}
-
 /* =================================================
-   INDEX – IMAGE + TEXTE (CORRIGÉ)
-================================================= */
-.two-columns,
-.about-home {
-  display: flex;
-  gap: 50px;
-  align-items: center;
-}
-
-.two-columns img,
-.about-image img {
-  max-width: 360px;
-  border-radius: 24px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-}
-
-/* =================================================
-   GRILLE PRODUITS / GNOMES
+   PRODUITS
 ================================================= */
 .products-grid {
   display: grid;
@@ -280,7 +216,7 @@ p {
 }
 
 .product-card {
-  background-color: #fff;
+  background: #fff;
   border-radius: 20px;
   padding: 20px;
   text-align: center;
@@ -293,7 +229,6 @@ p {
   box-shadow: 0 14px 40px rgba(0,0,0,0.14);
 }
 
-/* 🔒 TAILLES IMAGE STABLES */
 .product-card img {
   width: 180px;
   height: 180px;
@@ -302,236 +237,18 @@ p {
   border-radius: 16px;
 }
 
-.product-card p {
-  font-size: 0.95rem;
-  color: #666;
-}
-
-.product-info-title {
-  margin-top: 30px; /* augmente l'espace au-dessus de ce H3 */
-  margin-bottom: 10px; /* espace en dessous si nécessaire */
-  font-size: 25px; /* optionnel : taille un peu plus lisible */
-  font-weight: 600;
-  color: #333;
-}
-
 /* =================================================
-   CTA
+   CARROUSEL & MINIATURES (FUSIONNÉ)
 ================================================= */
-.cta {
-  background-color: #efe9e1;
-  text-align: center;
-  padding: 80px 20px;
-}
-
-/* =================================================
-   FOOTER
-================================================= */
-footer {
-  background-color: #3b3b3b;
-  color: #efe9e1;
-  text-align: center;
-  padding: 25px;
-  font-size: 0.9rem;
-}
-
-/* =================================================
-   ANIMATIONS SCROLL
-================================================= */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
-}
-
-.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* =================================================
-   RESPONSIVE
-================================================= */
-@media (max-width: 1024px) {
-  .two-columns,
-  .about-home {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 3rem;
-  }
-
-  .section {
-    padding: 60px 6%;
-  }
-
-  .product-card img {
-    width: 160px;
-    height: 160px;
-  }
-}
-
-/* =================================================
-   INDEX – UNE CRÉATION SUR MESURE (CADRE + TAILLES)
-================================================= */
-
-.custom-process {
-  background-color: #ffffff;
-  border-radius: 28px;
-  padding: 60px 50px;
-  max-width: 1100px;
-  margin: 0 auto;
-  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
-}
-
-.custom-process h2 {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.process-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-}
-
-.process-item {
-  text-align: center;
-}
-
-.process-item img {
-  width: 140px;          /* 🔑 IMAGE MAÎTRISÉE */
-  height: auto;
-  margin: 0 auto 20px;
-}
-
-.process-item h3 {
-  font-size: 1.6rem;
-  margin-bottom: 10px;
-}
-
-.process-item p {
-  font-size: 0.95rem;
-  color: #666;
-  max-width: 260px;
-  margin: 0 auto;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .process-grid {
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
-
-  .custom-process {
-    padding: 50px 30px;
-  }
-}
-
-/* ===== CARROUSEL PRODUIT ===== */
-
-.product-detail {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-}
-
-/* Conteneur du carrousel */
-.product-image {
-  position: relative;
-  width: 100%;
-  max-width: 700px; /* augmente la largeur max de l'image principale */
-  margin: 0 auto; /* centrer */
-}
-
-/* Toutes les images du carrousel */
 .carousel-img {
   display: none;
-  border-radius: 16px;
   width: 100%;
-  height: auto; /* laisse la hauteur se calculer automatiquement */
-  object-fit: cover;
-  transition: transform 0.3s ease;
+  border-radius: 16px;
 }
 
-/* Image principale active */
 .carousel-img.active {
   display: block;
 }
-
-/* Thumbnails */
-.carousel-thumbs {
-  display: flex;
-  gap: 10px;
-  margin-top: 15px;
-  justify-content: center;
-}
-
-.carousel-thumbs img {
-  width: 100px;
-  height: 100px;
-  border-radius: 12px;
-  cursor: pointer;
-  object-fit: cover;
-  transition: transform 0.2s ease;
-}
-
-.carousel-thumbs img:hover {
-  transform: scale(1.05);
-}
-
-/* Boutons */
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.6);
-  color: #fff;
-  border: none;
-  font-size: 22px;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 5;
-  transition: background 0.3s;
-}
-
-.carousel-btn.prev {
-  left: 8px;
-}
-
-.carousel-btn.next {
-  right: 8px;
-}
-
-.carousel-btn:hover {
-  background: rgba(0,0,0,0.85);
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .product-image {
-    max-width: 90%;
-  }
-}
-
-@media (max-width: 768px) {
-  .product-detail {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .product-image {
-    width: 100%;
-  }
-}
-
-/* ===== MINIATURES CARROUSEL ===== */
 
 .carousel-thumbs {
   display: flex;
@@ -551,24 +268,22 @@ footer {
   transition: all 0.25s ease;
 }
 
-.carousel-thumbs img:hover {
-  opacity: 0.8;
-}
-
+.carousel-thumbs img:hover { opacity: 0.8; }
 .carousel-thumbs img.active {
   opacity: 1;
   border-color: #c97c5d;
 }
 
-/* ===== LIGHTBOX IMAGE PRODUIT ===== */
-
+/* =================================================
+   LIGHTBOX
+================================================= */
 .lightbox {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.85);
   display: none;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   z-index: 999;
 }
 
@@ -578,26 +293,28 @@ footer {
   border-radius: 16px;
 }
 
-.lightbox-close {
-  position: absolute;
-  top: 25px;
-  right: 30px;
-  font-size: 40px;
-  color: #fff;
-  cursor: pointer;
+/* =================================================
+   ANIMATIONS
+================================================= */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
 }
 
-/* ===== PAGE PRODUIT – MEDIA ===== */
-
-.product-media {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.product-media .carousel-thumbs {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 14px;
+/* =================================================
+   RESPONSIVE
+================================================= */
+@media (max-width: 768px) {
+  h1 { font-size: 3rem; }
+  .section { padding: 60px 6%; }
+  .product-card img {
+    width: 160px;
+    height: 160px;
+  }
 }
