@@ -58,42 +58,38 @@
   <section class="section fade-in">
     <div class="product-detail">
 
+      <!-- Carrousel et thumbnails -->
       <div class="product-media">
+        <div class="product-image carousel">
+          <img src="images/gnomes/gnome_pirate.jpeg" class="carousel-img active" alt="Jolly le Gnome Pirate">
+          <img src="images/gnomes/gnome_viking.jpeg" class="carousel-img" alt="Détail du gnome pirate">
+          <img src="images/gnomes/gnome_abeille.jpeg" class="carousel-img" alt="Vue alternative du gnome pirate">
+          <button class="carousel-btn prev">‹</button>
+          <button class="carousel-btn next">›</button>
+        </div>
 
-  <div class="product-image carousel">
-    <img src="images/gnomes/gnome_pirate.jpeg" class="carousel-img active" alt="Jolly le Gnome Pirate">
-    <img src="images/gnomes/gnome_viking.jpeg" class="carousel-img" alt="Détail du gnome pirate">
-    <img src="images/gnomes/gnome_abeille.jpeg" class="carousel-img" alt="Vue alternative du gnome pirate">
+        <div class="carousel-thumbs">
+          <img src="images/gnomes/gnome_pirate.jpeg" class="thumb active" data-index="0" alt="Jolly le Gnome Pirate">
+          <img src="images/gnomes/gnome_viking.jpeg" class="thumb" data-index="1" alt="Détail du gnome pirate">
+          <img src="images/gnomes/gnome_abeille.jpeg" class="thumb" data-index="2" alt="Vue alternative du gnome pirate">
+        </div>
+      </div>
 
-    <button class="carousel-btn prev">‹</button>
-    <button class="carousel-btn next">›</button>
-  </div>
-
-  <div class="carousel-thumbs">
-    <img src="images/gnomes/gnome_pirate.jpeg" class="thumb active" data-index="0">
-    <img src="images/gnomes/gnome_viking.jpeg" class="thumb" data-index="1">
-    <img src="images/gnomes/gnome_abeille.jpeg" class="thumb" data-index="2">
-  </div>
-
-</div>
-
+      <!-- Infos produit -->
       <div class="product-info">
         <h2>Jolly le Gnome Pirate</h2>
         <p class="price">25,00 €</p>
-
         <p>
           Jolly est un gnome pirate au look affirmé, inspiré des aventures en mer
           et des trésors cachés. Entièrement fait main, il apporte une touche
           originale et ludique à votre décoration.
         </p>
-
         <ul class="product-features">
           <li>🪡 Création artisanale faite main</li>
           <li>🏴‍☠️ Thème pirate, détails soignés</li>
           <li>🎁 Idéal en cadeau ou en déco</li>
           <li>🇫🇷 Fabriqué en France</li>
         </ul>
-
         <a href="me-contacter.html" class="btn">Commander ce gnome</a>
       </div>
 
@@ -112,8 +108,15 @@
     <p>© Le Cha'Telier Créatif – Créations artisanales personnalisées faites main en France.</p>
   </footer>
 
-  <!-- ANIMATION SCROLL -->
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close">×</span>
+    <img class="lightbox-img" src="" alt="">
+  </div>
+
+  <!-- SCRIPT GLOBAL -->
   <script>
+    // ===== Animation scroll =====
     const faders = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -123,77 +126,45 @@
         }
       });
     }, { threshold: 0.2 });
-
     faders.forEach(fade => observer.observe(fade));
+
+    // ===== Carrousel produit =====
+    const images = document.querySelectorAll('.carousel-img');
+    const thumbs = document.querySelectorAll('.thumb');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const nextBtn = document.querySelector('.carousel-btn.next');
+    let currentIndex = 0;
+
+    function showImage(index) {
+      images.forEach(img => img.classList.remove('active'));
+      thumbs.forEach(thumb => thumb.classList.remove('active'));
+      images[index].classList.add('active');
+      thumbs[index].classList.add('active');
+      currentIndex = index;
+    }
+
+    prevBtn.addEventListener('click', () => showImage((currentIndex - 1 + images.length) % images.length));
+    nextBtn.addEventListener('click', () => showImage((currentIndex + 1) % images.length));
+    thumbs.forEach(thumb => thumb.addEventListener('click', () => showImage(parseInt(thumb.dataset.index))));
+
+    // ===== Lightbox =====
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('.lightbox-img');
+    const closeBtn = lightbox.querySelector('.lightbox-close');
+
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+      });
+    });
+
+    closeBtn.addEventListener('click', () => lightbox.style.display = 'none');
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox) lightbox.style.display = 'none';
+    });
   </script>
 
-  <script>
-  const images = document.querySelectorAll('.carousel-img');
-  const thumbs = document.querySelectorAll('.thumb');
-  const prevBtn = document.querySelector('.carousel-btn.prev');
-  const nextBtn = document.querySelector('.carousel-btn.next');
-
-  let currentIndex = 0;
-
-  function showImage(index) {
-    images.forEach(img => img.classList.remove('active'));
-    thumbs.forEach(thumb => thumb.classList.remove('active'));
-
-    images[index].classList.add('active');
-    thumbs[index].classList.add('active');
-
-    currentIndex = index;
-  }
-
-  prevBtn.addEventListener('click', () => {
-    let index = (currentIndex - 1 + images.length) % images.length;
-    showImage(index);
-  });
-
-  nextBtn.addEventListener('click', () => {
-    let index = (currentIndex + 1) % images.length;
-    showImage(index);
-  });
-
-  thumbs.forEach(thumb => {
-    thumb.addEventListener('click', () => {
-      const index = parseInt(thumb.dataset.index);
-      showImage(index);
-    });
-  });
-</script>
-
-  <div class="lightbox" id="lightbox">
-  <span class="lightbox-close">×</span>
-  <img class="lightbox-img" src="" alt="">
-</div>
-
-  <script>
-  // Sélection des éléments
-  const lightbox = document.querySelector('.lightbox');
-  const lightboxImg = lightbox.querySelector('img');
-  const closeBtn = lightbox.querySelector('.lightbox-close');
-
-  // Ouvre la lightbox au clic sur une image
-  document.querySelectorAll('.product-image').forEach(img => {
-    img.addEventListener('click', () => {
-      lightbox.style.display = 'flex';
-      lightboxImg.src = img.src;
-    });
-  });
-
-  // Ferme la lightbox
-  closeBtn.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-  });
-
-  // Ferme au clic en dehors de l'image
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) {
-      lightbox.style.display = 'none';
-    }
-  });
-</script>
-  
 </body>
 </html>
