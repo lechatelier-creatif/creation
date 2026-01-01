@@ -1,172 +1,45 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- PRODUIT -->
+<section class="section fade-in">
+  <div class="product-detail" style="text-align: center;">
 
-  <title>Jolly le Gnome Pirate – Le Cha'Telier Créatif</title>
-  <meta name="description" content="Jolly le Gnome Pirate, une création artisanale faite main. Un gnome décoratif au look pirate, parfait pour une décoration originale et unique." />
-
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-  <!-- TOP BAR -->
-  <div class="top-bar">
-    <div class="container">
-      <div class="logo">
-        <a href="index.html">
-          <img src="images/logo_rond.png" alt="Le Cha'Telier Créatif">
-        </a>
+    <!-- Carrousel et thumbnails -->
+    <div class="product-media" style="display: inline-block;">
+      <div class="product-image carousel">
+        <img src="images/gnomes/gnome_pirate.jpeg" class="carousel-img active" alt="Jolly le Gnome Pirate">
+        <img src="images/gnomes/gnome_viking.jpeg" class="carousel-img" alt="Détail du gnome pirate">
+        <img src="images/gnomes/gnome_abeille.jpeg" class="carousel-img" alt="Vue alternative du gnome pirate">
+        <button class="carousel-btn prev">‹</button>
+        <button class="carousel-btn next">›</button>
       </div>
-      <div class="social-icons">
-        <a href="https://www.instagram.com/chatelier.creatif/" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
-        <a href="https://fr.pinterest.com/lechateliercreatif/" target="_blank"><img src="images/pinterest.png" alt="Pinterest"></a>
-        <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-        <a href="https://www.etsy.com/fr/shop/LeChaTelierCreatif" target="_blank"><img src="images/etsy.png" alt="Etsy"></a>
+
+      <div class="carousel-thumbs">
+        <img src="images/gnomes/gnome_pirate.jpeg" class="thumb active" data-index="0" alt="Jolly le Gnome Pirate">
+        <img src="images/gnomes/gnome_viking.jpeg" class="thumb" data-index="1" alt="Détail du gnome pirate">
+        <img src="images/gnomes/gnome_abeille.jpeg" class="thumb" data-index="2" alt="Vue alternative du gnome pirate">
       </div>
     </div>
+
+    <!-- Infos produit centrées -->
+    <div class="product-info" style="margin-top: 30px; max-width: 700px; margin-left: auto; margin-right: auto;">
+      <h2>Jolly le Gnome Pirate</h2>
+      <p class="price">25,00 €</p>
+      <p>
+        Jolly est un gnome pirate au look affirmé, inspiré des aventures en mer
+        et des trésors cachés. Entièrement fait main, il apporte une touche
+        originale et ludique à votre décoration.
+      </p>
+      <ul class="product-features" style="list-style: none; padding: 0; margin: 20px 0;">
+        <li>🪡 Création artisanale faite main</li>
+        <li>🏴‍☠️ Thème pirate, détails soignés</li>
+        <li>🎁 Idéal en cadeau ou en déco</li>
+        <li>🇫🇷 Fabriqué en France</li>
+      </ul>
+
+      <!-- Bouton Etsy centré -->
+      <a href="https://www.etsy.com/fr/shop/LeChaTelierCreatif" target="_blank" class="btn-etsy">
+        Commander sur Etsy
+      </a>
+    </div>
+
   </div>
-
-  <!-- NAV -->
-  <nav class="main-nav">
-    <ul class="nav-list">
-      <li><a href="index.html">Accueil</a></li>
-      <li class="dropdown">
-        <a href="creations.html">Mes créations ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="gnome.html">Gnomes personnalisés</a></li>
-          <li><a href="box.html">Box personnalisées</a></li>
-          <li><a href="banderole.html">Banderoles personnalisées</a></li>
-          <li><a href="pochon.html">Pochons personnalisés</a></li>
-        </ul>
-      </li>
-      <li><a href="a-propos.html">À propos</a></li>
-      <li><a href="me-contacter.html">Me contacter</a></li>
-    </ul>
-  </nav>
-
-  <!-- HERO -->
-  <header class="hero">
-    <div class="hero-content fade-in">
-      <h1>Jolly le Gnome Pirate</h1>
-      <p>Un esprit d’aventure, une touche de malice et beaucoup de caractère.</p>
-    </div>
-  </header>
-
-  <!-- PRODUIT -->
-  <section class="section fade-in">
-    <div class="product-detail">
-
-      <!-- Carrousel et thumbnails -->
-      <div class="product-media">
-        <div class="product-image carousel">
-          <img src="images/gnomes/gnome_pirate.jpeg" class="carousel-img active" alt="Jolly le Gnome Pirate">
-          <img src="images/gnomes/gnome_viking.jpeg" class="carousel-img" alt="Détail du gnome pirate">
-          <img src="images/gnomes/gnome_abeille.jpeg" class="carousel-img" alt="Vue alternative du gnome pirate">
-          <button class="carousel-btn prev">‹</button>
-          <button class="carousel-btn next">›</button>
-        </div>
-
-        <div class="carousel-thumbs">
-          <img src="images/gnomes/gnome_pirate.jpeg" class="thumb active" data-index="0" alt="Jolly le Gnome Pirate">
-          <img src="images/gnomes/gnome_viking.jpeg" class="thumb" data-index="1" alt="Détail du gnome pirate">
-          <img src="images/gnomes/gnome_abeille.jpeg" class="thumb" data-index="2" alt="Vue alternative du gnome pirate">
-        </div>
-      </div>
-
-      <!-- Infos produit -->
-      <div class="product-info">
-        <h2>Jolly le Gnome Pirate</h2>
-        <p class="price">25,00 €</p>
-        <p>
-          Jolly est un gnome pirate au look affirmé, inspiré des aventures en mer
-          et des trésors cachés. Entièrement fait main, il apporte une touche
-          originale et ludique à votre décoration.
-        </p>
-        <ul class="product-features">
-          <li>🪡 Création artisanale faite main</li>
-          <li>🏴‍☠️ Thème pirate, détails soignés</li>
-          <li>🎁 Idéal en cadeau ou en déco</li>
-          <li>🇫🇷 Fabriqué en France</li>
-        </ul>
-        <a href="https://www.etsy.com/fr/listing/4399586312/jolly-le-gnome-pirate-decoration-fait?sr_prefetch=1&pf_from=shop_home&ref=shop_home_active_9&logging_key=f024b8df9b7e17e608f56fc017950242f996bbb5%3A4399586312" target="_blank" class="btn-etsy">
-  Commander sur Etsy
-</a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta fade-in">
-    <h2>Envie d’un autre univers ?</h2>
-    <p>Film, série, métier ou thème spécifique… je crée votre gnome sur mesure.</p>
-     <a href="me-contacter.html" class="btn">Créer mon gnome</a>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© Le Cha'Telier Créatif – Créations artisanales personnalisées faites main en France.</p>
-  </footer>
-
-  <!-- LIGHTBOX -->
-  <div class="lightbox" id="lightbox">
-    <span class="lightbox-close">×</span>
-    <img class="lightbox-img" src="" alt="">
-  </div>
-
-  <!-- SCRIPT GLOBAL -->
-  <script>
-    // ===== Animation scroll =====
-    const faders = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
-    faders.forEach(fade => observer.observe(fade));
-
-    // ===== Carrousel produit =====
-    const images = document.querySelectorAll('.carousel-img');
-    const thumbs = document.querySelectorAll('.thumb');
-    const prevBtn = document.querySelector('.carousel-btn.prev');
-    const nextBtn = document.querySelector('.carousel-btn.next');
-    let currentIndex = 0;
-
-    function showImage(index) {
-      images.forEach(img => img.classList.remove('active'));
-      thumbs.forEach(thumb => thumb.classList.remove('active'));
-      images[index].classList.add('active');
-      thumbs[index].classList.add('active');
-      currentIndex = index;
-    }
-
-    prevBtn.addEventListener('click', () => showImage((currentIndex - 1 + images.length) % images.length));
-    nextBtn.addEventListener('click', () => showImage((currentIndex + 1) % images.length));
-    thumbs.forEach(thumb => thumb.addEventListener('click', () => showImage(parseInt(thumb.dataset.index))));
-
-    // ===== Lightbox =====
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = lightbox.querySelector('.lightbox-img');
-    const closeBtn = lightbox.querySelector('.lightbox-close');
-
-    images.forEach(img => {
-      img.addEventListener('click', () => {
-        lightbox.style.display = 'flex';
-        lightboxImg.src = img.src;
-        lightboxImg.alt = img.alt;
-      });
-    });
-
-    closeBtn.addEventListener('click', () => lightbox.style.display = 'none');
-    lightbox.addEventListener('click', e => {
-      if (e.target === lightbox) lightbox.style.display = 'none';
-    });
-  </script>
-
-</body>
-</html>
+</section>
