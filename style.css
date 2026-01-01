@@ -271,6 +271,7 @@ p {
 /* =================================================
    GRILLE PRODUITS / GNOMES
 ================================================= */
+/* ===== GRID DES PRODUITS ===== */
 .products-grid {
   display: flex;
   flex-wrap: wrap;
@@ -278,6 +279,7 @@ p {
   justify-content: center;
 }
 
+/* ===== CARTE PRODUIT ===== */
 .product-card {
   flex: 0 1 250px;
   display: flex;
@@ -298,19 +300,29 @@ p {
   transform: translateY(-5px);
 }
 
+/* ===== IMAGE DU PRODUIT ===== */
 .product-card img {
-  width: 100%;
-  height: auto;
+  width: 180px;       /* fixe une largeur uniforme */
+  height: 180px;      /* fixe une hauteur uniforme */
+  object-fit: cover;  /* garde le ratio et recadre si nécessaire */
   display: block;
-  border-radius: 12px 12px 0 0;
+  margin: 0 auto 16px;
+  border-radius: 16px;
 }
 
+/* ===== TITRE ===== */
 .product-card h3 {
   margin: 12px 0 10px;
   font-size: 1.1rem;
 }
 
-/* Bouton "Découvrir" avec design identique au bouton CTA */
+/* ===== PARAGRAPHE (optionnel, si tu remets les prix) ===== */
+.product-card p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* ===== BOUTON "DÉCOUVRIR" ===== */
 .btn-discover {
   position: absolute;
   bottom: 10px;
@@ -336,7 +348,16 @@ p {
   background-color: #005bb5; /* hover identique au bouton CTA */
 }
 
-/* Responsive */
+/* ===== H3 SPECIFIQUE POUR LES INFOS PRODUIT ===== */
+.product-info-title {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .product-card {
     flex: 0 1 45%;
@@ -347,27 +368,6 @@ p {
   .product-card {
     flex: 0 1 90%;
   }
-}
-/* 🔒 TAILLES IMAGE STABLES */
-.product-card img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  margin: 0 auto 16px;
-  border-radius: 16px;
-}
-
-.product-card p {
-  font-size: 0.95rem;
-  color: #666;
-}
-
-.product-info-title {
-  margin-top: 30px; /* augmente l'espace au-dessus de ce H3 */
-  margin-bottom: 10px; /* espace en dessous si nécessaire */
-  font-size: 25px; /* optionnel : taille un peu plus lisible */
-  font-weight: 600;
-  color: #333;
 }
 
 /* =================================================
