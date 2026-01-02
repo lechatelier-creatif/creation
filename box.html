@@ -1,154 +1,47 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Box anniversaire personnalisée – Le Cha'Telier Créatif</title>
-  <meta name="description" content="Transformez la fête de votre enfant avec notre box anniversaire personnalisée. Décoration artisanale, unique et prête à installer, 100% faite main en France." />
+  <title>Box personnalisées – Le Cha'Telier Créatif</title>
+  <meta name="description" content="Découvrez nos box personnalisées artisanales, faites main en France. Des coffrets uniques à offrir pour toutes les occasions.">
 
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Ajouts spécifiques pour box anniversaire */
-
-    /* Deux colonnes responsive */
-    .two-columns {
-      display: flex;
-      gap: 40px;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      margin-bottom: 60px;
-    }
-
-    .about-image {
-      flex: 1 1 400px;
-      overflow: hidden;
-      border-radius: 20px;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.12);
-    }
-
-    .about-image img {
-      width: 100%;
-      display: block;
-      transition: transform 0.3s ease;
-    }
-
-    .about-image img:hover {
-      transform: scale(1.03);
-    }
-
-    .about-text {
-      flex: 1 1 400px;
-    }
-
-    .about-text h2 {
-      margin-bottom: 20px;
-    }
-
-    .values-list {
-      list-style: none;
-      padding: 0;
-      margin: 20px 0;
-    }
-
-    .values-list li {
-      margin-bottom: 10px;
-      font-weight: 500;
-    }
-
-    .btn-container {
-      text-align: center;
-      margin-top: 25px;
-    }
-
-    /* Animations au scroll */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s ease;
-    }
-
-    .visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Hero amélioré */
-    .hero {
-      min-height: 60vh;
-      background: linear-gradient(
-          rgba(249, 246, 242, 0.85),
-          rgba(249, 246, 242, 0.85)
-        ),
-        url("images/hero.jpg") center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    .hero-content {
-      max-width: 720px;
-      padding: 40px;
-      background-color: rgba(255,255,255,0.6);
-      border-radius: 28px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-    }
-
-    @media (max-width: 1024px) {
-      .two-columns {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .about-image, .about-text {
-        flex: 1 1 100%;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .section {
-        padding: 50px 7%;
-      }
-
-      .hero h1 {
-        font-size: 3rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .hero h1 {
-        font-size: 2.4rem;
-      }
-
-      .btn {
-        padding: 12px 24px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Bandeau supérieur -->
+  <!-- TOP BAR -->
   <div class="top-bar">
     <div class="container">
       <div class="logo">
-        <a href="index.html"><img src="images/logo_rond.png" alt="Le Cha'Telier Créatif" /></a>
+        <a href="index.html">
+          <img src="images/logo_rond.png" alt="Logo Le Cha'Telier Créatif">
+        </a>
       </div>
+
       <div class="social-icons">
-        <a href="https://www.instagram.com/chatelier.creatif/" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
-        <a href="https://fr.pinterest.com/lechateliercreatif/" target="_blank"><img src="images/pinterest.png" alt="Pinterest"></a>
-        <a href="https://www.facebook.com/toncompte" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
-        <a href="https://www.etsy.com/fr/shop/LeChaTelierCreatif" target="_blank"><img src="images/etsy.png" alt="Etsy"></a>
+        <a href="https://www.instagram.com/chatelier.creatif/" target="_blank" rel="noopener noreferrer">
+          <img src="images/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://fr.pinterest.com/lechateliercreatif/" target="_blank" rel="noopener noreferrer">
+          <img src="images/pinterest.png" alt="Pinterest">
+        </a>
+        <a href="#">
+          <img src="images/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.etsy.com/fr/shop/LeChaTelierCreatif" target="_blank" rel="noopener noreferrer">
+          <img src="images/etsy.png" alt="Etsy">
+        </a>
       </div>
     </div>
   </div>
 
-  <!-- Navigation -->
+  <!-- NAV -->
   <nav class="main-nav">
     <ul class="nav-list">
       <li><a href="index.html">Accueil</a></li>
+
       <li class="dropdown">
         <a href="creations.html">Mes créations ▾</a>
         <ul class="dropdown-menu">
@@ -158,7 +51,8 @@
           <li><a href="pochon.html">Pochons personnalisés</a></li>
         </ul>
       </li>
-      <li><a href="a-propos.html">À propos du Cha'Telier</a></li>
+
+      <li><a href="a-propos.html">À propos</a></li>
       <li><a href="me-contacter.html">Me contacter</a></li>
     </ul>
   </nav>
@@ -166,89 +60,68 @@
   <!-- HERO -->
   <header class="hero">
     <div class="hero-content fade-in">
-      <h1>Box anniversaire personnalisée</h1>
-      <p>Une décoration unique et prête à installer, pensée pour rendre chaque anniversaire mémorable.</p>
+      <h1>Les box personnalisées</h1>
+      <p>Des coffrets cadeaux imaginés avec soin, personnalisables et faits main pour marquer chaque occasion.</p>
     </div>
   </header>
 
-  <!-- CONTENU PRODUIT -->
+  <!-- PRODUITS -->
   <section class="section fade-in">
-    <div class="two-columns">
+    <div class="products-grid">
 
-      <!-- Image -->
-      <div class="about-image">
-        <img src="images/box.jpeg" alt="Box anniversaire personnalisée faite main en France">
-      </div>
+      <a href="box-a-personnaliser.html" class="product-card">
+        <img src="images/box/box_a_personnaliser.jpg" alt="Box à personnaliser">
+        <h3>Box à personnaliser</h3>
+        <span class="btn-discover">Découvrir</span>
+      </a>
 
-      <!-- Texte -->
-      <div class="about-text">
-        <h2>Transformez la fête de votre enfant</h2>
-        <p>
-          Avec notre <strong>box anniversaire personnalisée</strong>, chaque détail est pensé pour créer un moment unique. 
-          Décoration, couleurs, prénom, message ou contenu : tout est sur mesure et prêt à être installé.
-        </p>
-        <p>
-          Offrez une expérience originale et artisanale, qui se distingue des solutions standardisées. 
-          Idéale pour un anniversaire enfant, chaque box raconte une histoire et laisse un souvenir durable.
-        </p>
+      <a href="box-naissance.html" class="product-card">
+        <img src="images/box/box_naissance.jpg" alt="Box naissance personnalisée">
+        <h3>Box naissance</h3>
+        <span class="btn-discover">Découvrir</span>
+      </a>
 
-        <h3>✔ Caractéristiques</h3>
-        <ul class="values-list">
-          <li>Décoration anniversaire enfant 100% artisanale</li>
-          <li>Fabrication française</li>
-          <li>Personnalisation complète selon vos envies</li>
-          <li>Box unique et prête à installer</li>
-        </ul>
+      <a href="box-anniversaire.html" class="product-card">
+        <img src="images/box/box_anniversaire.jpg" alt="Box anniversaire personnalisée">
+        <h3>Box anniversaire</h3>
+        <span class="btn-discover">Découvrir</span>
+      </a>
 
-        <div class="btn-container">
-          <a href="mailto:contact@lechateliercreatif.fr" class="btn">Commander une box personnalisée</a>
-        </div>
-      </div>
+      <a href="box-fete.html" class="product-card">
+        <img src="images/box/box_fete.jpg" alt="Box pour les fêtes">
+        <h3>Box spéciale fêtes</h3>
+        <span class="btn-discover">Découvrir</span>
+      </a>
 
     </div>
-  </section>
-
-  <!-- SEO TEXTE LONG -->
-  <section class="section alt fade-in">
-    <h2>Pourquoi choisir une box anniversaire artisanale ?</h2>
-    <p class="intro">
-      Une box artisanale personnalisée est bien plus qu’un simple cadeau : c’est une attention unique, pensée avec soin, 
-      qui crée une expérience mémorable et un souvenir durable pour votre enfant.
-    </p>
   </section>
 
   <!-- CTA -->
   <section class="cta fade-in">
-    <h2>Une idée précise en tête ?</h2>
-    <p>Expliquez-moi votre projet et je créerai une box qui correspond parfaitement à vos envies.</p>
-    <a href="mailto:contact@lechateliercreatif.fr" class="btn">Me contacter</a>
+    <h2>Créer une box sur mesure</h2>
+    <p>Choisissez le thème, les couleurs et les créations pour composer un coffret unique.</p>
+    <a href="me-contacter.html" class="btn">Créer ma box</a>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
     <p>© Le Cha'Telier Créatif – Créations artisanales personnalisées faites main en France.</p>
   </footer>
 
+  <!-- ANIMATION SCROLL -->
   <script>
-    // Animation scroll simple
     const faders = document.querySelectorAll('.fade-in');
 
-    const appearOptions = {
-      threshold: 0.2
-    };
-
-    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if(entry.isIntersecting) {
+        if (entry.isIntersecting) {
           entry.target.classList.add('visible');
           observer.unobserve(entry.target);
         }
       });
-    }, appearOptions);
+    }, { threshold: 0.2 });
 
-    faders.forEach(fader => {
-      appearOnScroll.observe(fader);
-    });
+    faders.forEach(el => observer.observe(el));
   </script>
 
 </body>
