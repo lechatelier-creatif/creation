@@ -321,20 +321,19 @@ p {
   }
 }
 
-/* ===== CARROUSEL PRODUIT – version harmonisée ===== */
+/* ===== CARROUSEL PRODUIT – image gauche / texte droite ===== */
 
 .product-detail {
   display: flex;
-  flex-direction: column; /* photo principale au-dessus, vignettes en dessous */
-  gap: 30px;
-  align-items: center;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap; /* pour mobile, image au-dessus du texte */
 }
 
 .product-image {
   position: relative;
   width: 100%;
-  max-width: 450px; /* limite la largeur comme sur les autres pages */
-  margin: 0 auto;
+  max-width: 450px; /* limite la taille de l'image principale */
   cursor: pointer;
 }
 
@@ -356,9 +355,8 @@ p {
   display: flex;
   gap: 8px;
   overflow-x: auto; /* scroll si plus de 5 vignettes */
-  padding-bottom: 6px;
+  padding-top: 12px;
   width: 100%;
-  max-width: 450px; /* aligné avec la photo principale */
 }
 
 .thumb {
@@ -382,8 +380,18 @@ p {
   outline: 2px solid #c97c5d;
 }
 
-/* Responsive */
+/* Texte à droite de l'image */
+.product-info {
+  flex: 1; /* prend le reste de l'espace */
+  max-width: 550px;
+}
+
+/* Responsive : image au-dessus du texte sur mobile */
 @media (max-width: 768px) {
+  .product-detail {
+    flex-direction: column;
+    gap: 20px;
+  }
   .product-image { max-width: 90%; }
   .carousel-thumbs { max-width: 90%; }
   .thumb { width: 50px; height: 50px; }
