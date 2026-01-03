@@ -478,79 +478,83 @@ p {
 }
 
 /* =================================================
-   SECTION – DANS LE MÊME THÈME
+   SECTION – DANS LE MÊME THÈME (VERSION COMPACTE)
 ================================================= */
 
 .related {
-  padding: 80px 8%;
+  padding: 55px 6%;
+  background-color: #f9f6f2;
+}
+
+.related-inner {
+  max-width: 950px;
+  margin: 0 auto;
   text-align: center;
 }
 
 .related h2 {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .related-subtitle {
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 45px;
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 30px;
 }
 
-/* Grille des cartes */
+/* Grille plus resserrée */
 .related-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 30px;
-  max-width: 1100px;
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 22px;
 }
 
-/* Carte individuelle */
+/* Cartes plus fines */
 .related-card {
   background-color: #ffffff;
-  border-radius: 22px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover premium */
 .related-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 45px rgba(0,0,0,0.14);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.12);
 }
 
-/* Image */
+/* Images réduites */
 .related-card img {
-  width: 180px;
-  height: 180px;
+  width: 135px;
+  height: 135px;
   object-fit: cover;
-  border-radius: 16px;
-  margin: 0 auto 16px;
-  transition: transform 0.4s ease;
+  border-radius: 14px;
+  margin: 0 auto 12px;
 }
 
-.related-card:hover img {
-  transform: scale(1.06);
-}
-
-/* Titres */
+/* Titres plus discrets */
 .related-card h3 {
-  font-size: 1.6rem;
-  margin-bottom: 8px;
-  transition: color 0.3s ease;
+  font-size: 1.4rem;
+  margin-bottom: 4px;
 }
 
-.related-card:hover h3 {
-  color: #c97c5d;
-}
-
-/* Texte */
+/* Texte plus court */
 .related-card p {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   color: #666;
-  line-height: 1.5;
+  line-height: 1.4;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .related {
+    padding: 45px 6%;
+  }
+
+  .related-card img {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 /* =================================================
