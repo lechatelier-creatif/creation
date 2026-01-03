@@ -321,25 +321,23 @@ p {
   }
 }
 
-/* ===== CARROUSEL PRODUIT ===== */
+/* ===== CARROUSEL PRODUIT – version harmonisée ===== */
 
 .product-detail {
   display: flex;
-  flex-direction: column; /* on met les thumbnails en dessous de la principale */
+  flex-direction: column; /* photo principale au-dessus, vignettes en dessous */
   gap: 30px;
   align-items: center;
 }
 
-/* Conteneur du carrousel */
 .product-image {
   position: relative;
   width: 100%;
-  max-width: 450px; /* photo principale plus raisonnable */
+  max-width: 450px; /* limite la largeur comme sur les autres pages */
   margin: 0 auto;
-  cursor: pointer; /* indique qu'on peut cliquer pour zoom */
+  cursor: pointer;
 }
 
-/* Toutes les images du carrousel */
 .carousel-img {
   display: none;
   width: 100%;
@@ -349,53 +347,20 @@ p {
   transition: transform 0.3s ease;
 }
 
-/* Image principale active */
 .carousel-img.active {
   display: block;
 }
 
-/* Boutons navigation */
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.6);
-  color: #fff;
-  border: none;
-  font-size: 22px;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 5;
-  transition: background 0.3s;
-}
-
-.carousel-btn.prev { left: 8px; }
-.carousel-btn.next { right: 8px; }
-
-.carousel-btn:hover { background: rgba(0,0,0,0.85); }
-
-/* Thumbnails sous l'image principale */
+/* Thumbnails sous la principale */
 .carousel-thumbs {
   display: flex;
   gap: 8px;
-  overflow-x: auto; /* scroll si trop de vignettes */
-  overflow-y: hidden;
+  overflow-x: auto; /* scroll si plus de 5 vignettes */
   padding-bottom: 6px;
   width: 100%;
+  max-width: 450px; /* aligné avec la photo principale */
 }
 
-.carousel-thumbs::-webkit-scrollbar {
-  height: 6px;
-}
-
-.carousel-thumbs::-webkit-scrollbar-thumb {
-  background: #d6cfc4;
-  border-radius: 10px;
-}
-
-/* Miniatures */
 .thumb {
   flex: 0 0 auto;
   width: 60px;
@@ -420,6 +385,7 @@ p {
 /* Responsive */
 @media (max-width: 768px) {
   .product-image { max-width: 90%; }
+  .carousel-thumbs { max-width: 90%; }
   .thumb { width: 50px; height: 50px; }
 }
 
