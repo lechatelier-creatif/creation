@@ -325,24 +325,26 @@ p {
 
 .product-detail {
   display: flex;
-  gap: 40px;
-  align-items: flex-start;
+  flex-direction: column; /* on met les thumbnails en dessous de la principale */
+  gap: 30px;
+  align-items: center;
 }
 
 /* Conteneur du carrousel */
 .product-image {
   position: relative;
   width: 100%;
-  max-width: 700px; /* augmente la largeur max de l'image principale */
-  margin: 0 auto; /* centrer */
+  max-width: 450px; /* photo principale plus raisonnable */
+  margin: 0 auto;
+  cursor: pointer; /* indique qu'on peut cliquer pour zoom */
 }
 
 /* Toutes les images du carrousel */
 .carousel-img {
   display: none;
-  border-radius: 16px;
   width: 100%;
-  height: auto; /* laisse la hauteur se calculer automatiquement */
+  height: auto;
+  border-radius: 16px;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
@@ -352,18 +354,36 @@ p {
   display: block;
 }
 
-/* Thumbnails */
+/* Boutons navigation */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  font-size: 22px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 5;
+  transition: background 0.3s;
+}
+
+.carousel-btn.prev { left: 8px; }
+.carousel-btn.next { right: 8px; }
+
+.carousel-btn:hover { background: rgba(0,0,0,0.85); }
+
+/* Thumbnails sous l'image principale */
 .carousel-thumbs {
   display: flex;
   gap: 8px;
-  margin-top: 12px;
-
-  overflow-x: auto;
+  overflow-x: auto; /* scroll si trop de vignettes */
   overflow-y: hidden;
-  white-space: nowrap;
-
-  max-width: 100%;
   padding-bottom: 6px;
+  width: 100%;
 }
 
 .carousel-thumbs::-webkit-scrollbar {
@@ -375,12 +395,13 @@ p {
   border-radius: 10px;
 }
 
+/* Miniatures */
 .thumb {
   flex: 0 0 auto;
   width: 60px;
   height: 60px;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   opacity: 0.6;
   transition: opacity 0.2s ease, transform 0.2s ease;
@@ -393,20 +414,13 @@ p {
 
 .thumb.active {
   opacity: 1;
-  outline: 2px solid #c3b6a5;
+  outline: 2px solid #c97c5d;
 }
 
-.carousel-thumbs img {
-  width: 100px;
-  height: 100px;
-  border-radius: 12px;
-  cursor: pointer;
-  object-fit: cover;
-  transition: transform 0.2s ease;
-}
-
-.carousel-thumbs img:hover {
-  transform: scale(1.05);
+/* Responsive */
+@media (max-width: 768px) {
+  .product-image { max-width: 90%; }
+  .thumb { width: 50px; height: 50px; }
 }
 
 /* Boutons */
