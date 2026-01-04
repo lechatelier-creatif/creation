@@ -599,6 +599,41 @@ p {
   }
 }
 
+.quote-section {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #f7f2ee;
+  margin: 80px 0;
+}
+
+.quote-section blockquote {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #5a4638;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.quote-section blockquote::before,
+.quote-section blockquote::after {
+  content: "“";
+  font-size: 4rem;
+  color: #d2b49c;
+  position: absolute;
+  opacity: 0.4;
+}
+
+.quote-section blockquote::before {
+  top: -20px;
+  left: -30px;
+}
+
+.quote-section blockquote::after {
+  content: "”";
+  bottom: -40px;
+  right: -30px;
+}
 
 /* =================================================
    CTA
