@@ -602,24 +602,26 @@ p {
 /* ===== CITATION ATELIER ===== */
 
 .atelier-quote {
-  margin: 30px 0;
-  padding: 20px 24px;
+  margin: 40px 0;
+  padding: 24px 28px;
   background: #f7f3ee;
   border-left: 4px solid #c3b6a5;
   border-radius: 12px;
+
+  text-align: center;
   font-style: italic;
+  font-weight: 600;
   color: #4a4a4a;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .atelier-quote span {
   display: block;
-  margin-top: 10px;
+  margin-top: 12px;
   font-style: normal;
   font-weight: 600;
   color: #8b7d6b;
 }
-
 /* =================================================
    CTA
 ================================================= */
