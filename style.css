@@ -676,10 +676,16 @@ p {
   max-width: 500px;
 }
 
-/* Icônes réseaux – page Me contacter */
 .contact-section .social-links img {
-  width: 20px;
+  width: 18px;
   height: auto;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.contact-section .social-links a:hover img {
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 /* =================================================
