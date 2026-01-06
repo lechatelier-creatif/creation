@@ -187,8 +187,9 @@
     <img class="lightbox-img" src="" alt="">
   </div>
 
-  <!-- SCRIPT -->
+  <!-- SCRIPT GLOBAL -->
   <script>
+    // ===== Animation scroll =====
     const faders = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -200,6 +201,7 @@
     }, { threshold: 0.2 });
     faders.forEach(fade => observer.observe(fade));
 
+    // ===== Carrousel produit =====
     const images = document.querySelectorAll('.carousel-img');
     const thumbs = document.querySelectorAll('.thumb');
     const prevBtn = document.querySelector('.carousel-btn.prev');
@@ -218,6 +220,7 @@
     nextBtn.addEventListener('click', () => showImage((currentIndex + 1) % images.length));
     thumbs.forEach(thumb => thumb.addEventListener('click', () => showImage(parseInt(thumb.dataset.index))));
 
+    // ===== Lightbox =====
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = lightbox.querySelector('.lightbox-img');
     const closeBtn = lightbox.querySelector('.lightbox-close');
