@@ -147,11 +147,11 @@
 
 <!-- CTA -->
 <section class="cta fade-in">
-  <h2>Une idée précise ou juste une inspiration ?</h2>
+  <h2>Envie d’un autre univers ?</h2>
   <p>
-    Dites-moi le thème, l’occasion et l’univers souhaité : je m’occupe de transformer votre idée en <strong>box personnalisée artisanale</strong>.
+    Je crée votre <strong>box anniversaire personnalisée</strong> selon le thème que vous souhaitez pour votre enfant.
   </p>
-  <a href="me-contacter.html" class="btn">Lancer ma box sur mesure</a>
+  <a href="me-contacter.html" class="btn">Créer ma box sur mesure</a>
 </section>
 
 <!-- FOOTER -->
@@ -159,7 +159,7 @@
   <p>© Le Cha'Telier Créatif – Créations artisanales personnalisées faites main en France.</p>
 </footer>
 
-<!-- SCRIPT GLOBAL -->
+<!-- SCRIPT -->
 <script>
   const faders = document.querySelectorAll('.fade-in');
   const observer = new IntersectionObserver(entries => {
@@ -171,6 +171,24 @@
     });
   }, { threshold: 0.2 });
   faders.forEach(fade => observer.observe(fade));
+
+  const images = document.querySelectorAll('.carousel-img');
+  const thumbs = document.querySelectorAll('.thumb');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+  let currentIndex = 0;
+
+  function showImage(index) {
+    images.forEach(img => img.classList.remove('active'));
+    thumbs.forEach(thumb => thumb.classList.remove('active'));
+    images[index].classList.add('active');
+    thumbs[index].classList.add('active');
+    currentIndex = index;
+  }
+
+  prevBtn.addEventListener('click', () => showImage((currentIndex - 1 + images.length) % images.length));
+  nextBtn.addEventListener('click', () => showImage((currentIndex + 1) % images.length));
+  thumbs.forEach(thumb => thumb.addEventListener('click', () => showImage(parseInt(thumb.dataset.index))));
 </script>
 
 </body>
