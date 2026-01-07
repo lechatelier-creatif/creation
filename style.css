@@ -774,6 +774,11 @@ p {
   text-align: center;
 }
 
+.section.section-compact {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 /* =================================================
    CTA
 ================================================= */
