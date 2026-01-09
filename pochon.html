@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
-<div id="site-header"></div>
+<script>
+  fetch('partials/header.html')
+    .then(r => r.text())
+    .then(html => document.getElementById('site-header').innerHTML = html);
+</script>
 <body>
 
   <!-- TOP BAR -->
