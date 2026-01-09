@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>[TITRE DE LA PAGE] – Le Cha'Telier Créatif</title>
+  <meta name="description" content="[DESCRIPTION DE LA PAGE]" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- BANDEAU SUPÉRIEUR -->
+<div class="top-bar">
+  <div class="container top-bar-inner">
+    <a href="index.html" class="logo">
+      <img src="images/logo_rond.png" alt="Le Cha'Telier Créatif">
+    </a>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/chatelier.creatif/" target="_blank" rel="noopener" aria-label="Instagram – Le Cha'Telier Créatif">
+        <img src="images/instagram.png" alt="Instagram – Le Cha'Telier Créatif">
+      </a>
+      <a href="https://fr.pinterest.com/lechateliercreatif/" target="_blank" rel="noopener" aria-label="Pinterest – Le Cha'Telier Créatif">
+        <img src="images/pinterest.png" alt="Pinterest – Le Cha'Telier Créatif">
+      </a>
+      <a href="https://www.facebook.com/crea.by.cha.2023?locale=fr_FR" target="_blank" rel="noopener" aria-label="Facebook – Le Cha'Telier Créatif">
+        <img src="images/facebook.png" alt="Facebook – Le Cha'Telier Créatif">
+      </a>
+      <a href="https://www.etsy.com/fr/shop/LeChaTelierCreatif" target="_blank" rel="noopener" aria-label="Boutique Etsy – Le Cha'Telier Créatif">
+        <img src="images/etsy.png" alt="Etsy – Boutique Le Cha'Telier Créatif">
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- NAVIGATION -->
+<nav class="main-nav">
+  <ul class="nav-list container">
+    <li><a href="index.html">Accueil</a></li>
+    <li class="dropdown">
+      <a href="creations.html">Mes créations ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="gnome.html">Gnomes personnalisés</a></li>
+        <li><a href="box.html">Box personnalisées</a></li>
+        <li><a href="banderole.html">Banderoles personnalisées</a></li>
+        <li><a href="pochon.html">Pochons personnalisés</a></li>
+      </ul>
+    </li>
+    <li><a href="a-propos.html">À propos du Cha'Telier</a></li>
+    <li><a href="me-contacter.html">Me contacter</a></li>
+  </ul>
+</nav>
+
+<!-- CONTENU DE LA PAGE -->
+<!-- ================================= -->
+<!-- TU MODIFIES UNIQUEMENT CETTE ZONE -->
+<!-- ================================= -->
+
+<main>
+  <!-- Hero / Sections / Contenu spécifique -->
+</main>
+
+<!-- FOOTER -->
+<footer class="footer fade-in">
+  <div class="container">
+    <p>
+      © Le Cha'Telier Créatif – Fait main en France |
+      <a href="mentions-legales.html">Mentions légales</a>
+    </p>
+  </div>
+</footer>
+
+<!-- BANNIÈRE COOKIES -->
+<div id="cookie-banner" class="cookie-banner">
+  <div class="container">
+    <p>
+      Nous utilisons des cookies pour améliorer votre expérience.
+      <a href="mentions-legales.html">En savoir plus</a>
+    </p>
+    <button id="accept-cookies" class="btn btn-primary">Accepter</button>
+  </div>
+</div>
+
+<!-- SCRIPTS -->
+<script>
+  // Animations scroll
+  const elements = document.querySelectorAll('.fade-in, .slide-left, .slide-right');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  elements.forEach(el => observer.observe(el));
+
+  // Cookies
+  const banner = document.getElementById('cookie-banner');
+  const acceptBtn = document.getElementById('accept-cookies');
+
+  if (!localStorage.getItem('cookiesAccepted')) {
+    banner.style.display = 'block';
+  }
+
+  acceptBtn.addEventListener('click', () => {
+    localStorage.setItem('cookiesAccepted', 'true');
+    banner.style.display = 'none';
+  });
+</script>
+
+</body>
+</html>
