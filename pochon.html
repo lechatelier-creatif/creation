@@ -83,13 +83,7 @@
 <!-- =====================
      FOOTER
 ===================== -->
-<footer class="footer fade-in">
-  <div class="container">
-    <p>© Le Cha'Telier Créatif – Fait main en France | 
-      <a href="mentions-legales.html">Mentions légales</a>
-    </p>
-  </div>
-</footer>
+<div id="site-footer"></div>
 
   <!-- ANIMATION SCROLL -->
   <script>
@@ -112,6 +106,12 @@
     .then(res => res.text())
     .then(data => {
       document.getElementById('site-header').innerHTML = data;
+    });
+
+  fetch('partial/footer.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('site-footer').innerHTML = data;
     });
 </script>
   
