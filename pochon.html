@@ -58,10 +58,22 @@
   </section>
 
   <!-- CTA -->
-  <div id="site-cta"></div>
+  <section class="cta fade-in">
+    <h2>Une banderole à votre image</h2>
+    <p>Prénom, message, couleurs… chaque banderole est créée sur mesure selon vos envies.</p>
+    <a href="me-contacter.html" class="btn">Créer ma banderole</a>
+  </section>
 
-  <!-- FOOTER -->
-  <div id="site-footer"></div>
+<!-- =====================
+     FOOTER
+===================== -->
+<footer class="footer fade-in">
+  <div class="container">
+    <p>© Le Cha'Telier Créatif – Fait main en France | 
+      <a href="mentions-legales.html">Mentions légales</a>
+    </p>
+  </div>
+</footer>
 
   <!-- ANIMATION SCROLL -->
   <script>
@@ -78,17 +90,6 @@
 
     faders.forEach(el => observer.observe(el));
   </script>
-
-<script src="../js/partials.js"></script>
-
-  // Charger tous les partials
-  loadPartial('site-header', 'partial/header.html');
-  loadPartial('site-nav', 'partial/nav.html');
-  loadPartial('site-hero', 'partial/hero-pochon.html'); // si tu veux utiliser un hero partial
-  loadPartial('site-cta', 'partial/cta.html');
-  loadPartial('site-footer', 'partial/footer.html');
-
-});
   
 </body>
 </html>
