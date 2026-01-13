@@ -11,60 +11,26 @@
   <!-- Pages principales -->
   <url>
     <loc>https://lechatelier-creatif.github.io/creation/creations.html</loc>
+    <lastmod>2026-01-13</lastmod>
     <priority>0.9</priority>
   </url>
-  <url>
-    <loc>https://lechatelier-creatif.github.io/creation/me-contacter.html</loc>
-    <priority>0.8</priority>
-  </url>
+
   <url>
     <loc>https://lechatelier-creatif.github.io/creation/a-propos.html</loc>
+    <lastmod>2026-01-13</lastmod>
     <priority>0.7</priority>
   </url>
+
+  <url>
+    <loc>https://lechatelier-creatif.github.io/creation/me-contacter.html</loc>
+    <lastmod>2026-01-13</lastmod>
+    <priority>0.8</priority>
+  </url>
+
   <url>
     <loc>https://lechatelier-creatif.github.io/creation/mentions-legales.html</loc>
-    <priority>0.7</priority>
+    <lastmod>2026-01-13</lastmod>
+    <priority>0.3</priority>
   </url>
-
-  <!-- Pages Gnomes -->
-  <url><loc>https://lechatelier-creatif.github.io/creation/gnome.html</loc><priority>0.9</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/gnome-a-personnaliser.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/gnome-abeille.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/gnome-artiste.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/gnome-champi.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/gnome-cornet.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/gnome-cuisinier.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/gnome-epouvantail.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/gnome-glace.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/gnome-jack.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/gnome-lumy.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/gnome-marin.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/gnome-pikachu.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/gnome-pirate.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/gnome-rosie.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/gnome-sally.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/gnome-viking.html</loc><priority>0.8</priority></url>
-
-  <!-- Pages Box -->
-  <url><loc>https://lechatelier-creatif.github.io/creation/box.html</loc><priority>0.9</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/box-a-personnaliser.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/box-burger.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/box-halloween.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/box-ninjago.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/box-ninjago2.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/box-pikachu.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/box-sirene.html</loc><priority>0.8</priority></url>
-
-  <!-- Pages Banderoles -->
-  <url><loc>https://lechatelier-creatif.github.io/creation/banderole.html</loc><priority>0.9</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/banderole-boo.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/banderole-burger.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/banderole-halloween.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/banderole-lego.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/banderole-ninjago.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/banderole-ninjago2.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/banderole-pikachu.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/banderole-prenom2.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lechatelier-creatif.github.io/creation/banderole-sirene.html</loc><priority>0.8</priority></url>
 
 </urlset>
