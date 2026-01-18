@@ -69,9 +69,8 @@ p {
 .purchase-wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 20px;
-  margin-top: 25px;
+  flex-wrap: nowrap;      /* 🔑 important */
 }
 
 .price {
@@ -83,7 +82,8 @@ p {
 .purchase-buttons {
   display: flex;
   gap: 12px;
-  flex-shrink: 0; /* 🔑 empêche l’écrasement */
+  flex-wrap: nowrap;      /* 🔑 INTERDIT le retour à la ligne */
+  white-space: nowrap;    /* 🔑 sécurité supplémentaire */
 }
 
 .price {
