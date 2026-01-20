@@ -2,53 +2,66 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
+require __DIR__ . '/PHPMailer/src/Exception.php';
+require __DIR__ . '/PHPMailer/src/PHPMailer.php';
+require __DIR__ . '/PHPMailer/src/SMTP.php';
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(403);
+    exit;
+}
 
-    // Sécurité basique
-    if (!empty($_POST['website'])) {
-        exit(); // anti-spam
-    }
+/* ===== Anti-spam honeypot ===== */
+if (!empty($_POST['website'])) {
+    // Bot détecté → on ne fait rien
+    header('Location: merci.html');
+    exit;
+}
 
-    $name    = htmlspecialchars($_POST['name']);
-    $email   = htmlspecialchars($_POST['email']);
-    $message = nl2br(htmlspecialchars($_POST['message']));
-    $subject = htmlspecialchars($_POST['subject'] ?? 'Non précisé');
-    $date    = htmlspecialchars($_POST['event_date'] ?? 'Non précisée');
+/* ===== Sécurisation des champs ===== */
+$name    = trim($_POST['name'] ?? '');
+$email   = trim($_POST['email'] ?? '');
+$subject = trim($_POST['subject'] ?? 'Demande via le site');
+$date    = trim($_POST['event_date'] ?? 'Non précisée');
+$message = trim($_POST['message'] ?? '');
 
-    $mail = new PHPMailer(true);
+if ($name === '' || $email === '' || $message === '') {
+    http_response_code(400);
+    exit('Champs obligatoires manquants.');
+}
 
-    try {
-        $mail->isSMTP();
-        $mail->Host       = 'smtp-fr.securemail.pro';
-        $mail->SMTPAuth   = true;
-        $mail->Username   = 'contact@lechatelier-creatif.fr';
-        $mail->Password   = 'XXXX';
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-        $mail->Port       = 465;
+$mail = new PHPMailer(true);
 
-        $mail->setFrom('contact@lechatelier-creatif.fr', "Le Cha'Telier Créatif");
-        $mail->addAddress('contact@lechatelier-creatif.fr');
-        $mail->addReplyTo($email, $name);
+try {
+    $mail->isSMTP();
+    $mail->Host       = 'smtp-fr.securemail.pro';
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'contact@lechatelier-creatif.fr';
+    $mail->Password   = 'XXXX'; // mot de passe exact Amen
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    $mail->Port       = 465;
+    $mail->CharSet    = 'UTF-8';
 
-        $mail->isHTML(true);
-        $mail->Subject = "Nouveau message – Site Le Cha'Telier Créatif";
-        $mail->Body = "
-            <strong>Nom :</strong> {$name}<br>
-            <strong>Email :</strong> {$email}<br>
-            <strong>Type de demande :</strong> {$subject}<br>
-            <strong>Date de l’événement :</strong> {$date}<br><br>
-            <strong>Message :</strong><br>{$message}
-        ";
+    $mail->setFrom('contact@lechatelier-creatif.fr', "Le Cha'Telier Créatif");
+    $mail->addAddress('contact@lechatelier-creatif.fr');
+    $mail->addReplyTo($email, $name);
 
-        $mail->send();
-        header("Location: merci.html");
-        exit();
+    $mail->isHTML(true);
+    $mail->Subject = "📩 Nouveau message – {$subject}";
+    $mail->Body = "
+        <strong>Nom :</strong> {$name}<br>
+        <strong>Email :</strong> {$email}<br>
+        <strong>Type de demande :</strong> {$subject}<br>
+        <strong>Date événement :</strong> {$date}<br><br>
+        <strong>Message :</strong><br>
+        " . nl2br(htmlspecialchars($message));
 
-    } catch (Exception $e) {
-        echo "Erreur d'envoi : {$mail->ErrorInfo}";
-    }
+    $mail->send();
+
+    header('Location: merci.html');
+    exit;
+
+} catch (Exception $e) {
+    http_response_code(500);
+    echo 'Erreur d’envoi : ' . $mail->ErrorInfo;
 }
