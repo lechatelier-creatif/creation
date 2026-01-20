@@ -791,53 +791,79 @@ p {
    ME CONTACTER
 ================================================= */
 
-.page-contact p {
-  margin-bottom: 8px;  /* réduit l'espace par défaut entre paragraphes */
-  line-height: 1;     /* plus compact que le line-height classique */
+/* ===== CONTACT LAYOUT ===== */
+
+.contact-wrapper {
+  max-width: 1100px;
+  margin: auto;
 }
 
-.page-contact h1,
-.page-contact h2,
-.page-contact h3,
-.page-contact h4 {
-  margin-bottom: 6px;  /* espace réduit après les titres */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  align-items: start;
 }
 
-.contact-form {
-  max-width: 700px;      /* largeur confortable */
-  margin: 0 auto;        /* centrage horizontal */
+/* TEXTE À GAUCHE */
+.contact-text h2 {
+  margin-bottom: 20px;
 }
 
-.contact-or {
-  margin: 10px 0;        /* espace au-dessus et en dessous */
-  text-align: center;
-  font-weight: 600;
-  text-transform: uppercase;
-  opacity: 0.7;
+.contact-text p {
+  margin-bottom: 20px;
 }
 
-.contact-or + .contact-form {
+.contact-note {
+  margin-top: 20px;
+  font-size: 0.95rem;
+}
+
+/* CARTE FORMULAIRE */
+.contact-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  border: 1px solid #eee;
+}
+
+/* FORMULAIRE */
+.contact-card .form-group {
+  margin-bottom: 18px;
+}
+
+.contact-card input,
+.contact-card textarea,
+.contact-card select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-family: inherit;
+}
+
+.contact-card input:focus,
+.contact-card textarea:focus,
+.contact-card select:focus {
+  outline: none;
+  border-color: #c7a86b;
+}
+
+.contact-card .btn {
+  width: 100%;
   margin-top: 10px;
 }
 
-.form-group {
-  margin-bottom: 16px;
-}
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
 
-.form-group.full {
-  margin-top: 10px;
-}
-
-.contact-section h1,
-.contact-section p,
-.section h2,
-.section .intro {
-  text-align: center;
-}
-
-.section.section-compact {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  .contact-card {
+    margin-top: 30px;
+  }
 }
 
 /* =================================================
